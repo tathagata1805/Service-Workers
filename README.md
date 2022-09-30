@@ -1,5 +1,5 @@
 # Service-Workers
-A repository consisting of samples on how to implement service workers and its features
+A repository consisting of samples on how to implement service workers and its features<br></br>
 Consists of features such as <br></br>
 <ul>
 <li>Communication between tabs</li>
