@@ -1,0 +1,17 @@
+## METHODS AVAILABLE IN CACHING    
+    CACHES
+    caches.delete(name).then(isGone=>{});
+    caches.has(name).then(hasFile=>{});
+    caches.keys().then(namesArray=>{});
+    caches.match(Request).then(cacheResponse=>{});
+    caches.open(name).then(cache=>{});
+    
+    CACHE - from caches.open()
+    cache.add(Request).then(()=>{});
+    cache.addAll(Requests[]).then(()=>{});
+    add and addAll === fetch() + cache.put()
+    cache.delete(Request, options).then(isGone=>{});
+    cache.keys([Request, options]).then((keysArray)=>{});
+    cache.match(Request, options).then((cacheResponse)=>{});
+    cache.matchAll([Request, options]).then((cacheResponses[])=>{});
+    cache.put(Request, Response).then(()=>{});

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/style.css" rel="stylesheet"></link>
+    <title>Service Worker: Desktop Notifications</title>
+</head>
+<body>
+    <h1>Desktop Notification</h1>
+    <script>
+
+        function showNotification() {
+            const notification = new Notification(" Notification from server!", {
+                body: "Hello from Admin!",
+                icon: "" // ADD ANY LOGO YOU WANT TO DISPLAY IN THE NOTIFICATION POPUP
+
+            });
+
+            notification.onclick = (e) => {
+                window.location.href = "https://google.com";
+            }
+        }
+        console.log(Notification.permission);
+
+        if(Notification.permission === 'granted') {
+            showNotification()
+        }
+            else if(Notification.permission !== 'denied'){
+                Notification.requestPermission().then(permission => {
+                    if(permission === 'granted') {
+                        showNotification();
+                    }
+
+                })
+            }
+    </script>
+</body>
+</html>

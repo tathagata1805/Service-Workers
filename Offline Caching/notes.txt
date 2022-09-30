@@ -1,0 +1,8 @@
+SERVICE WORKER LIFECYCLE:-
+1. LOADING:- done in main.js file
+2. INSTALLATION (using Install keyword)
+3. ACTIVATION (using Activate keyword)
+
+-> In order to visualize the 2nd and 3rd step, check on Preserve Log option in the console setting and this will show the console logs.
+-> Service Workers run in seperate thread than the browser, hence cannot manipulate the DOM directly.
+-> They are used for:- offline caching, notifications using Web APIs and background sync.

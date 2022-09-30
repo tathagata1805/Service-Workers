@@ -1,0 +1,2 @@
+SERVICE WORKER FOR DESKTOP NOTIFICATION:-
+1. There are three states of desktop notifications:- DEFAULT, GRANTED, DENIED
